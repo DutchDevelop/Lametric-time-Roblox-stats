@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@elara-services/fetch": "^1.0.1",
+    "express": "^4.17.2"
+  }
+}
