@@ -1,6 +1,5 @@
 const express = require("express");
 const fetch = require("@elara-services/fetch");
-const { json } = require("body-parser");
 const app = express();
 
 app.listen("4343",() =>{
@@ -19,7 +18,6 @@ async function Getinfo(req,res){
     const r = await fetch(`https://www.roblox.com/places/api-get-details?assetId=${placeid}`)
        .send()
        
-
     console.log(r.statusCode);
     if (r.statusCode === 200){
         let jsonobject = r.json();
