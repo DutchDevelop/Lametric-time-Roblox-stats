@@ -17,8 +17,6 @@ async function Getinfo(req,res){
 
     const r = await fetch(`https://www.roblox.com/places/api-get-details?assetId=${placeid}`)
        .send()
-       
-    console.log(r.statusCode);
     if (r.statusCode === 200){
         let jsonobject = r.json();
         console.log(jsonobject);
@@ -46,6 +44,7 @@ async function Getinfo(req,res){
 
         res.send(content);
         return;
+    }else{
+        return res.sendStatus(404);
     }
-    return res.sendStatus(404);
 }
